@@ -1,0 +1,22 @@
+{
+  "name": "cetar laundry",
+  "homepage": "https://github.com/Tatalazy/cetarlaundry",
+  "authors": [
+    "Shinta Saptarini <saptarinishinta@gmail.com>"
+  ],
+  "description": "this is prototype",
+  "main": "",
+  "keywords": [
+    "devcamp",
+    "laundry"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
