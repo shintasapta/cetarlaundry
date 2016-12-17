@@ -1,8 +1,17 @@
+/*start general */
+/* end general */
+/* start intro */
+/* start intro */
 .intro {
   background: url(../assets/bg/bg-laundry01.png) no-repeat bottom center scroll;
   object-fit: cover;
   margin-top: 20px;
   padding-top: 50px;
   padding-bottom: 10px; }
+  .intro .text-intro {
+    font-size: 16px;
+    text-color: ffffff; }
+
+/* end intro */
 
 /*# sourceMappingURL=main.css.map */
