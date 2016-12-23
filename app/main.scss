@@ -1,18 +1,8 @@
-$white: ffffff;
+/*from yongky*/
+$oncolor : #6dbe45;
+$offcolor : #c3c3c3;
+/*end*/
 
-/*start general */
-
-
-
-/* end general */
-
-
-/* start intro */
-
-
-
-
-/* start intro */
 .intro{
 	background: url(../assets/bg/bg-laundry01.png) no-repeat bottom center scroll;
 	object-fit: cover;
@@ -22,12 +12,19 @@ $white: ffffff;
 }
 	
 	
-	.text-intro{
-		font-size: 16px;
-		text-color: $white;
+
+	/*from yongky */
+	hr.off {
+    	border-bottom: 5px solid $offcolor;
+   		height: 0px;
+   		margin-bottom: 5px;
 	}
-		
+	hr.on {
+    	border-bottom: 5px solid $oncolor;
+   		height: 0px;
+   		margin-bottom: 5px;
+	}
+	/*end */
 
 
 
-/* end intro */
