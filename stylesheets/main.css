@@ -1,67 +1,44 @@
-/*start general */
-body {
-  background-color: #F5F5F5; }
+/*
+Error: Invalid CSS after "$white: #ffffff": expected "{", was ";"
+        on line 2 of app/main.scss
 
-.no-margin {
-  margin: 0 auto; }
+1: <<<<<<< HEAD
+2: $white: #ffffff;
+3: $soft-grey: #F5F5F5;
+4: 
+5: 
+6: @import url('bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss');
+7: 
 
-.ic-wrapper {
-  background: url("../assets/ic/ic-line.png") repeat-x center;
-  margin: 0 -20px;
-  padding-top: 20px; }
-
-.ic-wrapper.right {
-  background-repeat: no-repeat;
-  background-position: right; }
-
-.ic-wrapper.left {
-  background-repeat: no-repeat;
-  background-position: left; }
-
-.ic-wrapper.none {
-  background: none; }
-
-/* end general */
-/* start typhograpy */
-h1 {
-  color: ffffff; }
-
-/* end typhograpy */
-a {
-  color: white; }
-
-.navbar-custom {
-  margin: 0;
-  padding: 20px 0;
-  text-transform: uppercase;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  transition: background .5s ease-in-out,padding .5s ease-in-out; }
-
-.navbar-custom.top-nav-collapse {
-  padding: 0;
-  background: #2F6392; }
-
-.navbar-brand:focus {
-  outline: 0; }
-
-/* start intro */
-.intro {
-  background: url(../assets/bg/bg-laundry01.png) no-repeat bottom center scroll;
-  object-fit: cover;
-  height: auto;
-  padding: 15% 10%;
-  margin: 0px; }
-
-.text-intro1 {
-  font-weight: bold;
-  color: white; }
-
-.text-intro2 {
-  font-size: 20px;
-  color: white; }
-
-/* end intro */
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+app/main.scss:2
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/2.3.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"$white: #ffffff\": expected \"{\", was \";\"\A         on line 2 of app/main.scss\A \A 1: <<<<<<< HEAD\A 2: $white: #ffffff;\A 3: $soft-grey: #F5F5F5;\A 4: \A 5: \A 6: @import url('bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss');\A 7: "; }
