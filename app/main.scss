@@ -1,30 +1,96 @@
 $white: ffffff;
+$soft-grey: #F5F5F5;
 
 /*start general */
 
+
+body {
+	background-color: $soft-grey;
+}
+
+.no-margin{
+	margin: 0 auto;
+	
+}
+
+
+
+.ic-wrapper {
+    background: url('../assets/ic/ic-line.png') repeat-x center;
+    margin:0 -20px;
+    padding-top:20px;
+}
+
+.ic-wrapper.right {
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.ic-wrapper.left {
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.ic-wrapper.none {
+
+	background: none;
+    
+   
+}
 
 
 /* end general */
 
 
-/* start intro */
+/* start typhograpy */
 
+	h1{
 
+		color :$white;
 
+	}
+
+/* end typhograpy */
+a {
+	color: white;
+}
+
+.navbar-custom {
+    margin: 0;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+}	
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        background: #2F6392;
+    }
+
+	.navbar-brand:focus {
+    	outline: 0;
+	}
 
 /* start intro */
 .intro{
+
 	background: url(../assets/bg/bg-laundry01.png) no-repeat bottom center scroll;
 	object-fit: cover;
-	margin-top: 20px;
-	padding-top: 50px;
-	padding-bottom: 10px;
+	height: auto;
+	padding: 15% 10%;
+    margin: 0px;
 }
 	
-	
-	.text-intro{
-		font-size: 16px;
-		text-color: $white;
+	.text-intro1 {
+		font-weight: bold;
+		color: white;
+	}
+	.text-intro2 {
+		font-size: 20px;
+		color: white;
 	}
 		
 
