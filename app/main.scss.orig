@@ -1,11 +1,9 @@
-/*from yongky*/
-$oncolor : #6dbe45;
-$offcolor : #c3c3c3;
+<<<<<<< HEAD
 $white: #ffffff;
-$soft-grey: #EDF1F1;
-$main-blue: #2FA9DE;
-$main-yellow: #EFDC11;
-/*end*/
+$soft-grey: #F5F5F5;
+
+
+@import url('bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss');
 
 /*start general */
 
@@ -18,6 +16,8 @@ body {
 	margin: 0 auto;
 	
 }
+
+
 
 .ic-wrapper {
     background: url('../assets/ic/ic-line.png') repeat-x center;
@@ -37,12 +37,13 @@ body {
 
 .ic-wrapper.none {
 
-	background: none;    
+	background: none;
+    
    
 }
 
-/* end general */
 
+/* end general */
 
 
 /* start typhograpy */
@@ -54,13 +55,9 @@ body {
 	}
 
 /* end typhograpy */
-
 a {
-	color: $white;
+	color: white;
 }
-
-
-/* start navbar */
 
 .navbar-custom {
     margin: 0;
@@ -81,11 +78,14 @@ a {
     	outline: 0;
 	}
 
-/* end navbar */
-
-
 /* start intro */
+=======
+/*from yongky*/
+$oncolor : #6dbe45;
+$offcolor : #c3c3c3;
+/*end*/
 
+>>>>>>> db4835115e6dbb4674269dc80f1f69d1e164c9fb
 .intro{
 
 	background: url(../assets/bg/bg-laundry01.png) no-repeat bottom center scroll;
@@ -95,6 +95,7 @@ a {
     margin: 0px;
 }
 	
+<<<<<<< HEAD
 	.text-intro1 {
 		font-weight: bold;
 		color: white;
@@ -102,76 +103,22 @@ a {
 	.text-intro2 {
 		font-size: 20px;
 		color: white;
+=======
+	
+
+	/*from yongky */
+	hr.off {
+    	border-bottom: 5px solid $offcolor;
+   		height: 0px;
+   		margin-bottom: 5px;
 	}
-		
-/* end intro */
-
-
-/* start statuscheck */
-
-.statuscheck{
-	background-color: $soft-grey;
-	padding: 5% 0;
-}
-
-	.text-status1{
-		font-size: 20px;
-		margin: 20px 0;
+	hr.on {
+    	border-bottom: 5px solid $oncolor;
+   		height: 0px;
+   		margin-bottom: 5px;
+>>>>>>> db4835115e6dbb4674269dc80f1f69d1e164c9fb
 	}
-
-	.form-custom{
-		margin-bottom: 20px;
-	}
-
-	.form-control{
-		border-radius: 0px;
-	}
-
-	.btn-search{
-		border: 1px solid transparent;
-    	border-radius: 0px;
-    	padding: 6px 30px;
-    	background-color: $main-yellow;
-    	color: $white;
-	}
-
-	.panel-default> .panel-custom{
-
-		background-color: $main-blue;
-		color: $white;
-
-	}
-
-	.btn-detail{
-
-		border: 1px solid transparent;
-    	border-radius: 3px;
-    	padding: 6px 10px;
-    	background-color: $main-yellow;
-    	color: $white;
-
-	}
-/* end statuscheck */
+	/*end */
 
 
-/* start pricecheck */
 
-	.card-item{
-		background-color: $white;
-		padding: 20px;
-		border-radius: 4px;
-		overflow: hidden;
-		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-	}
-
-	.cover-item{
-		width: 100%;
-		height: 250px;
-
-		img{
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-/* end pricecheck */
