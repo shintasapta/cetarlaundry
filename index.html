@@ -9,10 +9,12 @@
 
 	<!-- main css -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 
@@ -337,23 +339,36 @@
 			  <form>
 					<div class="inner-addon">
 						<span class="glyphicon glyphicon-user text-muted" aria-hidden="true"></span>
-	          <input type="text" class="form-control" placeholder="Username">
+	          <input type="text" class="form-control" placeholder="Username" id="formUsername">
 	        </div>
 					<div class="inner-addon">
 						<span class="glyphicon glyphicon-lock text-muted" aria-hidden="true"></span>
-	          <input type="password" class="form-control" placeholder="Password">
+	          <input type="password" class="form-control" placeholder="Password" id="formPassword">
 	        </div>
 					<div class="checkbox" style="padding: 10px">
 				    <label>
 				      <input type="checkbox"> Ingat Saya
 				    </label>
 				  </div>
-					<input type="button" name="login" class="login loginmodal-submit" value="Masuk">
+					<input type="button" name="login" class="login loginmodal-submit" value="Masuk" onclick="checkLogin()">
 			  </form>
 			</div>
 		</div>
 	  </div>
 
+
+	<script>
+		function checkLogin() {
+			var uname = $('#formUsername').val(), passw = $('#formPassword').val();
+			var validUname = 'teslogin', validPassw = 'teslogin';
+			if (uname == validUname && passw == validPassw) {
+				window.location.href='detail.html';
+			}
+			else {
+				swal("Gagal Login", "Username dan password anda tidak cocok.\nSilahkan ulangi lagi..", "error");
+			}
+		}
+	</script>
 
 </body>
 </html>
