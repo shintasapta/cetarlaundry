@@ -35,7 +35,7 @@ a {
 /* start navbar */
 .navbar-custom {
   margin: 0;
-  padding: 20px 0;
+  background-color: #2EA9DD;
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -200,5 +200,8 @@ h6 {
   border: 0px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-color: #357ae8; }
+
+.navbar-toggle .icon-bar {
+  background-color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
