@@ -14,7 +14,7 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body>
+<body style="position: relative" data-spy="scroll" data-target="#navigation-bar">
 
     <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
         <div class="container">
@@ -29,20 +29,19 @@
 	                <img src="assets/ic/logo-laundry02.png" width="25">
 	             </a>
             </div>
-
-            <div class="collapse navbar-collapse navbar-main-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse navbar-main-collapse" id="navigation-bar">
                 <ul class="nav navbar-nav">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="" href="#">Home</a>
+                        <a class="" href="#home">Home</a>
                     </li>
                     <li>
-                        <a class="" href="#">Cek Harga</a>
+                        <a class="" href="#pricecheck">Cek Harga</a>
                     </li>
                     <li>
-                        <a class="" href="#">Cek Status</a>
+                        <a class="" href="#statuscheck">Cek Status</a>
                     </li>
                 </ul>
 
@@ -333,6 +332,23 @@
   	</div>
 
 	<script>
+		$(function() {
+			$('body').scrollspy({ target: '#navigation-bar' });
+
+			$('a[href*="#"]:not([href="#"])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      	var target = $(this.hash);
+			      	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      	if (target.length) {
+				        $('html, body').animate({
+				          scrollTop: target.offset().top
+				        }, 1000);
+				        return false;
+			      	}
+			    }
+		  	});
+		});
+
 		function checkLogin() {
 			var uname = $('#formUsername').val(), passw = $('#formPassword').val();
 			var validUname = 'teslogin', validPassw = 'teslogin';
