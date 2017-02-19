@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 	<link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
+	<style media="screen">
+		.contentLogin { display: none; }
+	</style>
 
   	<!-- javascript component -->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -38,14 +41,20 @@
                     <li>
                         <a href="#pricecheck">Cek Harga</a>
                     </li>
-                    <li>
+                    <li class="contentLogin">
                         <a href="#statuscheck">Cek Status</a>
                     </li>
                 </ul>
 
-				<div class="navbar-form navbar-right" role="search">
+				<div class="navbar-form navbar-right" role="search" id="tombolLogin" style="display:none">
 					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#login-modal">
 						LOGIN
+					</button>
+				</div>
+
+				<div class="navbar-form navbar-right contentLogin" role="search">
+					<button type="button" class="btn btn-default" onclick="logout()">
+						LOGOUT
 					</button>
 				</div>
             </div>
@@ -116,6 +125,8 @@
                             <h6>Biasa : Rp. 50.000</h6>
                             <h6>Paket : Rp. 100.000</h6>
                         </div>
+						<br >
+						<button type="button" onclick="cekcookie()">Cek Cookie</button>
                     </div>
                 </div>
             </div>
@@ -124,7 +135,7 @@
     <!-- end pricecheck -->
 
     <!-- start statuscheck -->
-    <section id="statuscheck" class="fullheight">
+    <section id="statuscheck" class="fullheight contentLogin">
         <div class="statuscheck">
             <div class="container">
 
@@ -312,17 +323,12 @@
 			  	<form>
 					<div class="inner-addon">
 						<span class="glyphicon glyphicon-user text-muted" aria-hidden="true"></span>
-			          	<input type="text" class="form-control" placeholder="Username" id="formUsername">
+			          	<input type="text" class="form-control inputLogin" placeholder="Username" id="formUsername">
 			        </div>
 					<div class="inner-addon">
 						<span class="glyphicon glyphicon-lock text-muted" aria-hidden="true"></span>
-			          	<input type="password" class="form-control" placeholder="Password" id="formPassword">
+			          	<input type="password" class="form-control inputLogin" placeholder="Password" id="formPassword">
 			        </div>
-					<div class="checkbox" style="padding: 10px">
-					    <label>
-				      		<input type="checkbox"> Ingat Saya
-					    </label>
-				  	</div>
 					<input type="button" name="login" class="login loginmodal-submit" value="Masuk" onclick="checkLogin()">
 			  	</form>
 			</div>
@@ -345,16 +351,75 @@
 			      	}
 			    }
 		  	});
+
+			$('.inputLogin').keyup(function(e) {
+				if (e.which == 13) {
+					checkLogin();
+				}
+			});
+
+			if (sudahLogin() == true) {
+				$('#tombolLogin').hide();
+				$('.contentLogin').show();
+			}
+			else {
+				$('.contentLogin').hide();
+				$('#tombolLogin').show();
+			}
 		});
+
+		function cekcookie() {
+			console.log(location);
+		}
+
+		function logout() {
+			swal({
+				title: "",
+				text: "Anda yakin ingin Logout?",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Ya",
+				cancelButtonText: "Batal",
+				closeOnConfirm: true
+			},
+			function(){
+				document.cookie = "loggedin=false";
+				location.reload();
+			});
+		}
+
+		function sudahLogin() {
+			var allcookies = document.cookie;
+			// Ambil tiap key cookie, dipisahkan dengan semicolon
+           	cookiearray = allcookies.split(';');
+
+			// set variabel "ret" dengan nilai default FALSE
+			var ret = false;
+
+           	// cek apakah ada key "loggedin" di cookie
+           	for(var i=0; i<cookiearray.length; i++){
+              	namaKey = cookiearray[i].split('=')[0];
+				isiValue = cookiearray[i].split('=')[1];
+			  	if (namaKey == 'loggedin' && isiValue == 'true') {
+					ret = true;
+					break;
+			  	}
+           	}
+
+			return ret;
+		}
 
 		function checkLogin() {
 			var uname = $('#formUsername').val(), passw = $('#formPassword').val();
-			var validUname = 'teslogin', validPassw = 'teslogin';
+			var validUname = 'user', validPassw = 'user';
 			if (uname == validUname && passw == validPassw) {
-				window.location.href='detail.html';
+				// write cookie
+				document.cookie = "loggedin=true";
+				location.reload();
 			}
 			else {
-				swal("Gagal Login", "Username dan password anda tidak cocok.\nSilahkan ulangi lagi..", "error");
+				swal("Gagal Login", "Username dan password anda tidak cocok.\nSilahkan ulangi lagi..\nCoba username = user & password = user", "error");
 			}
 		}
 	</script>
