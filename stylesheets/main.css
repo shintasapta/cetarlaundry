@@ -36,11 +36,16 @@ a {
 .navbar-custom {
   margin: 0;
   background-color: #2EA9DD;
+  border: 0px;
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
   -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
   transition: background .5s ease-in-out,padding .5s ease-in-out; }
+  .navbar-custom li.active a {
+    color: #666666 !important; }
+  .navbar-custom a {
+    color: #ffffff !important; }
 
 .navbar-custom.top-nav-collapse {
   padding: 0;
