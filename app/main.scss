@@ -93,14 +93,18 @@ a {
 
 /* end navbar */
 
+.fullheight {
+	min-height: 100vh !important;
+}
+
 
 /* start intro */
 
-.intro{
+#home {
 
 	background: url(../assets/bg/bg-laundry01.png) no-repeat bottom center scroll;
 	object-fit: cover;
-	height: auto;
+	// height: auto;
 	padding: 15% 10%;
     margin: 0px;
 }
